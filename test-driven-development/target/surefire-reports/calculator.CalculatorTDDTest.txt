@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: calculator.CalculatorTDDTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.081 s <<< FAILURE! - in calculator.CalculatorTDDTest
+testDivideZeroByZero(calculator.CalculatorTDDTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.ArithmeticException: Cannot divide by zero.
+	at calculator.CalculatorTDDTest.testDivideZeroByZero(CalculatorTDDTest.java:74)
+
