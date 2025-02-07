@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="calculator.CalculatorTest" time="0.128" tests="2" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="calculator.CalculatorTest" time="0.068" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\sifra\AppData\Local\Temp\surefire4891570528011840853\surefirebooter8487724617591688948.jar C:\Users\sifra\AppData\Local\Temp\surefire4891570528011840853 2025-02-06T22-38-53_474-jvmRun1 surefire16861342560102837704tmp surefire_013467491305217081499tmp"/>
+    <property name="sun.java.command" value="C:\Users\sifra\AppData\Local\Temp\surefire3236307904784546173\surefirebooter1549823716114074719.jar C:\Users\sifra\AppData\Local\Temp\surefire3236307904784546173 2025-02-06T22-58-01_719-jvmRun1 surefire14053506978073179181tmp surefire_015440206310668539041tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sifra\Desktop\software-testing\test-driven-development\target\test-classes;C:\Users\sifra\Desktop\software-testing\test-driven-development\target\classes;C:\Users\sifra\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\sifra\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\sifra\AppData\Local\Temp\surefire4891570528011840853\surefirebooter8487724617591688948.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sifra\AppData\Local\Temp\surefire3236307904784546173\surefirebooter1549823716114074719.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -58,26 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="testDivideByZero" classname="calculator.CalculatorTest" time="0.018">
-    <error message="Unresolved compilation problems: &#10;	Calculator cannot be resolved to a type&#10;	Calculator cannot be resolved to a type&#10;	Syntax error on token &quot;void&quot;, record expected&#10;	void is an invalid type for the variable testDivideNegativeNumbers&#10;	Syntax error on token &quot;;&quot;, { expected after this token&#10;	Syntax error, insert &quot;}&quot; to complete RecordBody&#10;" type="java.lang.Error">java.lang.Error: 
-Unresolved compilation problems: 
-	Calculator cannot be resolved to a type
-	Calculator cannot be resolved to a type
-	Syntax error on token "void", record expected
-	void is an invalid type for the variable testDivideNegativeNumbers
-	Syntax error on token ";", { expected after this token
-	Syntax error, insert "}" to complete RecordBody
-
-	at calculator.CalculatorTest.testDivideByZero(CalculatorTest.java:21)
-</error>
-  </testcase>
-  <testcase name="testDivide" classname="calculator.CalculatorTest" time="0">
-    <error message="Unresolved compilation problems: &#10;	Calculator cannot be resolved to a type&#10;	Calculator cannot be resolved to a type&#10;" type="java.lang.Error">java.lang.Error: 
-Unresolved compilation problems: 
-	Calculator cannot be resolved to a type
-	Calculator cannot be resolved to a type
-
-	at calculator.CalculatorTest.testDivide(CalculatorTest.java:14)
-</error>
-  </testcase>
+  <testcase name="testDivideByZero" classname="calculator.CalculatorTest" time="0.007"/>
+  <testcase name="testDivideNegativeNumbers" classname="calculator.CalculatorTest" time="0"/>
+  <testcase name="testDivide" classname="calculator.CalculatorTest" time="0"/>
 </testsuite>
