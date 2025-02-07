@@ -1,14 +1,12 @@
 package calculator;
 
 /**
- * Simple Calculator class.
+ * This was written without following TDD principles.
  */
 public class Calculator {
 
+    // Method written first, without writing test cases first
     public double divide(double a, double b) {
-        if (b == 0) {
-            throw new ArithmeticException("Cannot divide by zero");
-        }
-        return a / b;
+        return a / b; // No exception handling!
     }
 }

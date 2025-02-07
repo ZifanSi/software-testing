@@ -11,25 +11,25 @@ public class CalculatorTest {
 
     @Test
     public void testDivide() {
-        Calculator calculator = new Calculator();
+        CalculatorTDD calculator = new CalculatorTDD();
         double result = calculator.divide(10, 2);
         assertEquals(5.0, result, 0.0001);
     }
 
     @Test
     public void testDivideByZero() {
-        Calculator calculator = new Calculator();
+        CalculatorTDD calculator = new CalculatorTDD();
         try {
             calculator.divide(10, 0);
             fail("Expected an ArithmeticException to be thrown");
         } catch (ArithmeticException e) {
             assertEquals("Cannot divide by zero", e.getMessage());
         }
-    } // ✅ Closing bracket added here
+    }
 
     @Test
     public void testDivideNegativeNumbers() {
-        Calculator calculator = new Calculator();
+        CalculatorTDD calculator = new CalculatorTDD();
         double result = calculator.divide(10, -2);
         assertEquals(-5.0, result, 0.0001);
     }
