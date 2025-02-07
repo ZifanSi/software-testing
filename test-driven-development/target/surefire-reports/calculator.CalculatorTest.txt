@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: calculator.CalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.128 s <<< FAILURE! - in calculator.CalculatorTest
+testDivideByZero(calculator.CalculatorTest)  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Calculator cannot be resolved to a type
+	Calculator cannot be resolved to a type
+	Syntax error on token "void", record expected
+	void is an invalid type for the variable testDivideNegativeNumbers
+	Syntax error on token ";", { expected after this token
+	Syntax error, insert "}" to complete RecordBody
+
+	at calculator.CalculatorTest.testDivideByZero(CalculatorTest.java:21)
+
+testDivide(calculator.CalculatorTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Calculator cannot be resolved to a type
+	Calculator cannot be resolved to a type
+
+	at calculator.CalculatorTest.testDivide(CalculatorTest.java:14)
+
