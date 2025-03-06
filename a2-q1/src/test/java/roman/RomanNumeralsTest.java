@@ -79,28 +79,28 @@ public class RomanNumeralsTest {
         assertEquals("CDXLIV", RomanNumerals.roman(444));
         assertEquals("DLXVI", RomanNumerals.roman(566));
         assertEquals("DCCCXC", RomanNumerals.roman(890));
-        assertEquals("CMXCIX", RomanNumerals.roman(999)); // Largest valid number
+        assertEquals("CMXCIX", RomanNumerals.roman(999)); 
     }
 
     // Test edge cases (important numbers)
     @Test
     public void testEdgeCases() {
-        assertEquals("XL", RomanNumerals.roman(40));   // Special case for 40
-        assertEquals("L", RomanNumerals.roman(50));    // Special case for 50
-        assertEquals("C", RomanNumerals.roman(100));   // Smallest valid hundreds number
-        assertEquals("D", RomanNumerals.roman(500));   // Special case for 500
-        assertEquals("CMXCIX", RomanNumerals.roman(999)); // Largest valid number
+        assertEquals("XL", RomanNumerals.roman(40));   
+        assertEquals("L", RomanNumerals.roman(50));    
+        assertEquals("C", RomanNumerals.roman(100));   
+        assertEquals("D", RomanNumerals.roman(500));   
+        assertEquals("CMXCIX", RomanNumerals.roman(999)); 
     }
 
     // Test invalid numbers (below range)
     @Test(expected = IllegalArgumentException.class)
     public void testOutOfRangeLow() {
-        RomanNumerals.roman(0); // Roman numerals start from 1
+        RomanNumerals.roman(0); 
     }
 
     // Test invalid numbers (above range)
     @Test(expected = IllegalArgumentException.class)
     public void testOutOfRangeHigh() {
-        RomanNumerals.roman(1000); // 1000 is out of range for this implementation
+        RomanNumerals.roman(1000); 
     }
 }
