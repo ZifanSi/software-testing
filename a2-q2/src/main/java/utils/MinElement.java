@@ -3,7 +3,7 @@ package utils;
 import java.util.Iterator; 
 import java.util.List;
  
-public class Min { 
+public class MinElement { 
     /** 
      * Returns the minimum element in a list 
      * @param list Comparable list of elements to search 
