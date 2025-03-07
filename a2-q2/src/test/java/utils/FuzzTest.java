@@ -12,27 +12,27 @@ import org.junit.Test;
 
 public class FuzzTest {
 
-    // Test min() with an empty list, expecting an IllegalArgumentException.
+    // An empty list, expecting an IllegalArgumentException.
     @Test
     public void emptyList() {
         List<Integer> numbers = new ArrayList<>();
         assertThrows(IllegalArgumentException.class, () -> MinElement.min(numbers));
     }
 
-    // Test min() with a null list, expecting a NullPointerException.
+    // A null list, expecting a NullPointerException.
     @Test
     public void nullList() {
         assertThrows(NullPointerException.class, () -> MinElement.min(null));
     }
 
-    // Test min() with a list containing null values, expecting a NullPointerException.
+    // A list containing null values, expecting a NullPointerException.
     @Test
     public void listWithNullValues() {
         List<Integer> numbers = Arrays.asList(1, null, 3);
         assertThrows(NullPointerException.class, () -> MinElement.min(numbers));
     }
 
-    // Test min() with a large dataset to check performance.
+    // A large dataset to check performance.
     @Test
     public void largeDataset() {
         List<Integer> numbers = new ArrayList<>();
@@ -42,21 +42,21 @@ public class FuzzTest {
         assertEquals((Integer) 1, MinElement.min(numbers));
     }
 
-    // Test min() with extreme integer values.
+    // Extreme integer values.
     @Test
     public void extremeIntegerValues() {
         List<Integer> numbers = Arrays.asList(Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
         assertEquals((Integer) Integer.MIN_VALUE, MinElement.min(numbers));
     }
 
-    // Test min() with extreme float values.
+    // Extreme float values.
     @Test
     public void extremeFloatValues() {
         List<Float> numbers = Arrays.asList(Float.POSITIVE_INFINITY, Float.NEGATIVE_INFINITY, 0.0f);
         assertEquals((Float) Float.NEGATIVE_INFINITY, MinElement.min(numbers));
     }
 
-    // Test min() with a list containing very long strings.
+    // A list containing very long strings.
     @Test
     public void veryLongStrings() {
         String longString1 = "a".repeat(100000);
@@ -65,7 +65,7 @@ public class FuzzTest {
         assertEquals(longString1, MinElement.min(words));
     }
 
-    // Test min() with randomly generated numbers.
+    // Randomly generated numbers.
     @Test
     public void randomNumbers() {
         Random rand = new Random();
