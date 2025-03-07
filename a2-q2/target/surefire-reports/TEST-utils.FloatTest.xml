@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="utils.FloatTest" time="0.152" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="utils.FloatTest" time="0.132" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
-    <property name="sun.java.command" value="C:\Users\sifra\AppData\Local\Temp\surefire16432098320455203827\surefirebooter18187432114219994724.jar C:\Users\sifra\AppData\Local\Temp\surefire16432098320455203827 2025-03-06T23-52-03_517-jvmRun1 surefire8592521858972151011tmp surefire_04232650139250727911tmp"/>
+    <property name="sun.java.command" value="C:\Users\sifra\AppData\Local\Temp\surefire10469272788629179925\surefirebooter11181039405551014573.jar C:\Users\sifra\AppData\Local\Temp\surefire10469272788629179925 2025-03-07T00-46-50_276-jvmRun1 surefire16119202880099229695tmp surefire_017990922510125104601tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\sifra\Desktop\software-testing\a2-q2\target\test-classes;C:\Users\sifra\Desktop\software-testing\a2-q2\target\classes;C:\Users\sifra\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sifra\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\sifra\AppData\Local\Temp\surefire16432098320455203827\surefirebooter18187432114219994724.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sifra\AppData\Local\Temp\surefire10469272788629179925\surefirebooter11181039405551014573.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="22.0.2+9-70"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="singleFloat" classname="utils.FloatTest" time="0.016"/>
+  <testcase name="singleFloat" classname="utils.FloatTest" time="0.015"/>
   <testcase name="positiveFloat" classname="utils.FloatTest" time="0"/>
   <testcase name="negativeFloat" classname="utils.FloatTest" time="0"/>
   <testcase name="duplicateFloat" classname="utils.FloatTest" time="0"/>
