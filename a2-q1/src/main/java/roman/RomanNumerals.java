@@ -2,17 +2,15 @@ package roman;
 
 public class RomanNumerals {
     public static String roman(int number) {
-        if (number < 1 || number > 999) {  
-            throw new IllegalArgumentException("Number out of supported range (1-999)");
+        if (number < 1 || number > 99) {  
+            throw new IllegalArgumentException("Number out of supported range (1-99)");
         }
 
-        int c = (number % 1000) / 100; 
-        int x = (number % 100) / 10;  
-        int i = (number % 10) / 1; 
+        int x = (number % 100) / 10;  // tens place
+        int i = (number % 10);        // ones place
 
-        return romanForDigit(c, 'C', 'D', 'M') + 
-               romanForDigit(x, 'X', 'L', 'C') + 
-               romanForDigit(i, 'I', 'V', 'X');
+        return romanForDigit(x, 'X', 'L', 'C') +  // Tens place
+               romanForDigit(i, 'I', 'V', 'X');   // Ones place
     }
 
     private static String romanForDigit(int digit, char one, char five, char ten) {
@@ -24,8 +22,8 @@ public class RomanNumerals {
     }
 
     private static String repeatedChar(int count, char c) {
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < count; i++) result.append(c);
-        return result.toString();
+        String result = "";
+        for (int i = 0; i < count; i++) result += c;
+        return result;
     }
 }

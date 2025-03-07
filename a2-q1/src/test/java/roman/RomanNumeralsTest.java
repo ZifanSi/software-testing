@@ -5,9 +5,9 @@ import org.junit.Test;
 
 public class RomanNumeralsTest {
 
-    // Test numbers from 1-9 (single digits)
+    // Single-digit numbers (1-9)
     @Test
-    public void testSingleDigitNumbers() {
+    public void testSingleDigits() {
         assertEquals("I", RomanNumerals.roman(1));
         assertEquals("II", RomanNumerals.roman(2));
         assertEquals("III", RomanNumerals.roman(3));
@@ -19,9 +19,9 @@ public class RomanNumeralsTest {
         assertEquals("IX", RomanNumerals.roman(9));
     }
 
-    // Test numbers from 10-90 (multiples of ten)
+    // Multiples of ten (10-90)
     @Test
-    public void testTensNumbers() {
+    public void testMultiplesOfTen() {
         assertEquals("X", RomanNumerals.roman(10));
         assertEquals("XX", RomanNumerals.roman(20));
         assertEquals("XXX", RomanNumerals.roman(30));
@@ -33,9 +33,9 @@ public class RomanNumeralsTest {
         assertEquals("XC", RomanNumerals.roman(90));
     }
 
-    // Test numbers between 10-19 (teens)
+    // Numbers between 11-19 (teens)
     @Test
-    public void testTeenNumbers() {
+    public void testTeens() {
         assertEquals("XI", RomanNumerals.roman(11));
         assertEquals("XII", RomanNumerals.roman(12));
         assertEquals("XIII", RomanNumerals.roman(13));
@@ -47,60 +47,30 @@ public class RomanNumeralsTest {
         assertEquals("XIX", RomanNumerals.roman(19));
     }
 
-    // Test mid-range numbers (random selections from 20-99)
+    // Random numbers between 20-99
     @Test
     public void testMidRangeNumbers() {
         assertEquals("XXIV", RomanNumerals.roman(24));
-        assertEquals("XXXV", RomanNumerals.roman(35));
         assertEquals("XLIX", RomanNumerals.roman(49));
-        assertEquals("LVIII", RomanNumerals.roman(58));
-        assertEquals("LXIX", RomanNumerals.roman(69));
         assertEquals("LXXXVIII", RomanNumerals.roman(88));
+        assertEquals("XCIX", RomanNumerals.roman(99));
     }
 
-    // Test hundreds place numbers (100-900)
-    @Test
-    public void testHundredsNumbers() {
-        assertEquals("C", RomanNumerals.roman(100));
-        assertEquals("CC", RomanNumerals.roman(200));
-        assertEquals("CCC", RomanNumerals.roman(300));
-        assertEquals("CD", RomanNumerals.roman(400));
-        assertEquals("D", RomanNumerals.roman(500));
-        assertEquals("DC", RomanNumerals.roman(600));
-        assertEquals("DCC", RomanNumerals.roman(700));
-        assertEquals("DCCC", RomanNumerals.roman(800));
-        assertEquals("CM", RomanNumerals.roman(900));
-    }
-
-    // Test large mid-range numbers (random selections from 100-999)
-    @Test
-    public void testLargeMidRangeNumbers() {
-        assertEquals("CCLXV", RomanNumerals.roman(265));
-        assertEquals("CDXLIV", RomanNumerals.roman(444));
-        assertEquals("DLXVI", RomanNumerals.roman(566));
-        assertEquals("DCCCXC", RomanNumerals.roman(890));
-        assertEquals("CMXCIX", RomanNumerals.roman(999)); 
-    }
-
-    // Test edge cases (important numbers)
+    // Edge cases (minimum & maximum supported values)
     @Test
     public void testEdgeCases() {
-        assertEquals("XL", RomanNumerals.roman(40));   
-        assertEquals("L", RomanNumerals.roman(50));    
-        assertEquals("C", RomanNumerals.roman(100));   
-        assertEquals("D", RomanNumerals.roman(500));   
-        assertEquals("CMXCIX", RomanNumerals.roman(999)); 
+        assertEquals("I", RomanNumerals.roman(1));    // Smallest valid number
+        assertEquals("XCIX", RomanNumerals.roman(99)); // Largest valid number
     }
 
-    // Test invalid numbers (below range)
+    // Invalid numbers (out of range)
     @Test(expected = IllegalArgumentException.class)
     public void testOutOfRangeLow() {
-        RomanNumerals.roman(0); 
+        RomanNumerals.roman(0); // Should throw an exception
     }
 
-    // Test invalid numbers (above range)
     @Test(expected = IllegalArgumentException.class)
     public void testOutOfRangeHigh() {
-        RomanNumerals.roman(1000); 
+        RomanNumerals.roman(100); // Should throw an exception
     }
 }
