@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RomanNumerals.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">a2-q1</a> &gt; <a href="index.source.html" class="el_package">roman</a> &gt; <span class="el_source">RomanNumerals.java</span></div><h1>RomanNumerals.java</h1><pre class="source lang-java linenums">package roman;
+
+<span class="nc" id="L3">public class RomanNumerals {</span>
+    public static String roman(int number) {
+<span class="fc bfc" id="L5" title="All 4 branches covered.">        if (number &lt; 1 || number &gt; 99) {  </span>
+<span class="fc" id="L6">            throw new IllegalArgumentException(&quot;Number out of supported range (1-99)&quot;);</span>
+        }
+
+<span class="fc" id="L9">        int x = (number % 100) / 10;  // tens place</span>
+<span class="fc" id="L10">        int i = (number % 10);        // ones place</span>
+
+<span class="fc" id="L12">        return romanForDigit(x, 'X', 'L', 'C') +  // Tens place</span>
+<span class="fc" id="L13">               romanForDigit(i, 'I', 'V', 'X');   // Ones place</span>
+    }
+
+    private static String romanForDigit(int digit, char one, char five, char ten) {
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (digit == 0) return &quot;&quot;;</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (digit &lt;= 3) return repeatedChar(digit, one);</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (digit == 4) return &quot;&quot; + one + five;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (digit &lt;= 8) return five + repeatedChar(digit - 5, one);</span>
+<span class="fc" id="L21">        return &quot;&quot; + one + ten;</span>
+    }
+
+    private static String repeatedChar(int count, char c) {
+<span class="fc" id="L25">        String result = &quot;&quot;;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        for (int i = 0; i &lt; count; i++) result += c;</span>
+<span class="fc" id="L27">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
