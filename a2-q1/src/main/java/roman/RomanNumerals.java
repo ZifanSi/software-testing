@@ -2,9 +2,13 @@ package roman;
 
 public class RomanNumerals {
     public static String roman(int number) {
-        if (number < 1 || number > 99) {  
-            throw new IllegalArgumentException("Number out of supported range (1-99)");
+        if (number < 1) {
+            throw new IllegalArgumentException("Number must be >= 1");
         }
+        if (number > 99) {
+            throw new IllegalArgumentException("Number must be <= 99");
+        }        
+        
 
         int x = (number % 100) / 10;  // tens place
         int i = (number % 10);        // ones place

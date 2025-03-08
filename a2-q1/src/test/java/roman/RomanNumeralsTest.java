@@ -73,4 +73,14 @@ public class RomanNumeralsTest {
     public void testOutOfRangeHigh() {
         RomanNumerals.roman(100); // Should throw an exception
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testOutOfRangeNegative() {
+        RomanNumerals.roman(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testOutOfRangeAboveHundred() {
+        RomanNumerals.roman(101);
+    }
 }

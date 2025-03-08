@@ -2,29 +2,33 @@
 
 <span class="nc" id="L3">public class RomanNumerals {</span>
     public static String roman(int number) {
-<span class="fc bfc" id="L5" title="All 4 branches covered.">        if (number &lt; 1 || number &gt; 99) {  </span>
-<span class="fc" id="L6">            throw new IllegalArgumentException(&quot;Number out of supported range (1-99)&quot;);</span>
+<span class="fc bfc" id="L5" title="All 2 branches covered.">        if (number &lt; 1) {</span>
+<span class="fc" id="L6">            throw new IllegalArgumentException(&quot;Number must be &gt;= 1&quot;);</span>
         }
+<span class="fc bfc" id="L8" title="All 2 branches covered.">        if (number &gt; 99) {</span>
+<span class="fc" id="L9">            throw new IllegalArgumentException(&quot;Number must be &lt;= 99&quot;);</span>
+        }        
+        
 
-<span class="fc" id="L9">        int x = (number % 100) / 10;  // tens place</span>
-<span class="fc" id="L10">        int i = (number % 10);        // ones place</span>
+<span class="fc" id="L13">        int x = (number % 100) / 10;  // tens place</span>
+<span class="fc" id="L14">        int i = (number % 10);        // ones place</span>
 
-<span class="fc" id="L12">        return romanForDigit(x, 'X', 'L', 'C') +  // Tens place</span>
-<span class="fc" id="L13">               romanForDigit(i, 'I', 'V', 'X');   // Ones place</span>
+<span class="fc" id="L16">        return romanForDigit(x, 'X', 'L', 'C') +  // Tens place</span>
+<span class="fc" id="L17">               romanForDigit(i, 'I', 'V', 'X');   // Ones place</span>
     }
 
     private static String romanForDigit(int digit, char one, char five, char ten) {
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (digit == 0) return &quot;&quot;;</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (digit &lt;= 3) return repeatedChar(digit, one);</span>
-<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (digit == 4) return &quot;&quot; + one + five;</span>
-<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (digit &lt;= 8) return five + repeatedChar(digit - 5, one);</span>
-<span class="fc" id="L21">        return &quot;&quot; + one + ten;</span>
+        // if (digit == 0) return &quot;&quot;;
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (digit &lt;= 3) return repeatedChar(digit, one);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        if (digit == 4) return &quot;&quot; + one + five;</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (digit &lt;= 8) return five + repeatedChar(digit - 5, one);</span>
+<span class="fc" id="L25">        return &quot;&quot; + one + ten;</span>
     }
 
     private static String repeatedChar(int count, char c) {
-<span class="fc" id="L25">        String result = &quot;&quot;;</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        for (int i = 0; i &lt; count; i++) result += c;</span>
-<span class="fc" id="L27">        return result;</span>
+<span class="fc" id="L29">        String result = &quot;&quot;;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (int i = 0; i &lt; count; i++) result += c;</span>
+<span class="fc" id="L31">        return result;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

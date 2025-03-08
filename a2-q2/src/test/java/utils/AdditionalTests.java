@@ -1,10 +1,10 @@
 package utils;
 
-import org.junit.Test;
-import static org.junit.Assert.assertThrows;
-
 import java.util.Arrays;
 import java.util.List;
+
+import static org.junit.Assert.assertThrows;
+import org.junit.Test;
 
 public class AdditionalTests {
 
@@ -30,4 +30,5 @@ public class AdditionalTests {
         List list = Arrays.asList("stringValue", 42);
         assertThrows(ClassCastException.class, () -> MinElement.min(list));
     }
+
 }
