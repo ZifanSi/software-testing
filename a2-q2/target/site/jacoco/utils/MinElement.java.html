@@ -21,7 +21,7 @@ import java.util.List;
 <span class="fc" id="L21">        Iterator&lt;? extends T&gt; itr = list.iterator(); </span>
 <span class="fc" id="L22">        T result = itr.next(); </span>
  
-<span class="pc bpc" id="L24" title="1 of 2 branches missed.">        if (result == null) throw new NullPointerException(&quot;Min.min&quot;); </span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if (result == null) throw new NullPointerException(&quot;Min.min&quot;); </span>
  
 <span class="fc bfc" id="L26" title="All 2 branches covered.">        while (itr.hasNext()) {   // throws NPE, CCE as needed </span>
 <span class="fc" id="L27">            T comp = itr.next(); </span>
