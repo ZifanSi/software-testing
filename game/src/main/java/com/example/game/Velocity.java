@@ -1,77 +1,67 @@
 package com.example.game;
 
 public class Velocity {
-    private int speed;    // overall speed
-    private int speedX;   // speed in the x-direction
-    private int speedY;   // speed in the y-direction
-    private int direction; // angle in degrees (0 = east, 90 = north, etc.)
+    private Speed speed;
+    private Direction direction;
+    private Speed speedX;
+    private Speed speedY;
 
-    // Default constructor
     public Velocity() {
-        this.speed = 0;
-        this.direction = 0;
-        updateComponents();
+        this(new Speed(0), new Direction(0));
     }
 
-    // Parameterized constructor
-    public Velocity(int speed, int direction) {
-        this.speed = speed;
-        this.direction = normalize(direction);
-        updateComponents();
+    public Velocity(Speed speed, Direction direction) {
+        setSpeed(speed);
+        setDirection(direction);
     }
 
-    private int normalize(int angle) {
-        angle = angle % 360;
-        if (angle < 0) {
-            angle += 360;
-        }
-        return angle;
-    }
-
-    private void updateComponents() {
-        double rad = Math.toRadians(direction);
-        this.speedX = (int)Math.round(speed * Math.cos(rad));
-        this.speedY = (int)Math.round(speed * Math.sin(rad));
-    }
-
-    public int getSpeed() {
+    public Speed getSpeed() {
         return speed;
     }
 
-    public int getSpeedX() {
+    public Speed getSpeedX() {
         return speedX;
     }
 
-    public int getSpeedY() {
+    public Speed getSpeedY() {
         return speedY;
     }
 
-    public int getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
-    public void setSpeed(int speed) {
+    public void setSpeed(Speed speed) {
+        if (speed.getValue() < 0) throw new IllegalArgumentException("Speed must be non-negative.");
         this.speed = speed;
         updateComponents();
     }
 
-    public void setDirection(int direction) {
-        this.direction = normalize(direction);
+    public void setDirection(Direction direction) {
+        this.direction = direction;
         updateComponents();
     }
 
     public void reverse() {
-        this.direction = normalize(this.direction + 180);
+        direction.reverse();
         updateComponents();
     }
 
     public void reverseX() {
-        this.direction = normalize(180 - this.direction);
+        direction.reverseX();
         updateComponents();
     }
 
     public void reverseY() {
-        this.direction = normalize(360 - this.direction);
+        direction.reverseY();
         updateComponents();
+    }
+
+    private void updateComponents() {
+        double radians = Math.toRadians(direction.getDegrees());
+        int vx = (int) Math.round(speed.getValue() * Math.cos(radians));
+        int vy = (int) Math.round(speed.getValue() * Math.sin(radians));
+        this.speedX = new Speed(vx);
+        this.speedY = new Speed(vy);
     }
 }
